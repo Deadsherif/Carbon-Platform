@@ -40,7 +40,8 @@ export default function App() {
         path: '',
         element: <MainLayout />,
         children: [
-          { index: 'Home', element: <Home /> },
+          { index: 'Carbon-Platform', element: <Home /> },
+          { path: 'Carbon-Platform', element: <Home /> },
           { path: 'Home', element: <Home /> },
           { path: 'ProjectsInformation', element: <ProjectsInformation /> },
           { path: 'ScopesDefinition', element: <ScopesDefinition /> },
