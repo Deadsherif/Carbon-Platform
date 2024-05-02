@@ -38,7 +38,7 @@ export default function Ghg() {
                         <p>SF6, which is used in high-voltage electricity equipment, has a ‘Global Warming Potential’ 23,000 times greater than CO2.</p>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center align-items-center">
-                    <img src="../Imgs/GHG.jpg" alt="Description of the image" className="img-fluid w-100" />
+                    <img src={process.env.PUBLIC_URL +"/Imgs/GHG.jpg"} alt="Description of the image" className="img-fluid w-100" />
                     </div>
                 </div>
         

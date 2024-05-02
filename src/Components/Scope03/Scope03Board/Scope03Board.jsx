@@ -36,45 +36,50 @@ export default function Scope03Board() {
 
   useEffect(() => {
     const savedData = localStorage.getItem('WellToTankFuelsData');
-    const parsedData = JSON.parse(savedData);
-    if (!Array.isArray(parsedData.calculations)) return;
+    if (savedData) {
+      const parsedData = JSON.parse(savedData);
+      if (!Array.isArray(parsedData.calculations)) return;
 
-    setChartData1({
+      setChartData1({
 
-      labels: parsedData.labels.map((rowData) => rowData),
-      datasets: [
-        {
-          data: parsedData.calculations,
-          backgroundColor: itemColors.slice(0, parsedData.labels.length),
-          borderWidth: 1,
-        },
-      ],
-    });
-    setTotal1(parsedData.totalConsumption)
+        labels: parsedData.labels.map((rowData) => rowData),
+        datasets: [
+          {
+            data: parsedData.calculations,
+            backgroundColor: itemColors.slice(0, parsedData.labels.length),
+            borderWidth: 1,
+          },
+        ],
+      });
+      setTotal1(parsedData.totalConsumption)
+    }
   }, []);
 
   useEffect(() => {
     const savedData = localStorage.getItem('WaterData');
-    const parsedData = JSON.parse(savedData);
-    if (!Array.isArray(parsedData.calculations)) return;
+    if (savedData) {
+      const parsedData = JSON.parse(savedData);
+      if (!Array.isArray(parsedData.calculations)) return;
 
-    setChartData2({
+      setChartData2({
 
-      labels: parsedData.labels.map((rowData) => rowData),
-      datasets: [
-        {
-          data: parsedData.calculations,
-          backgroundColor: itemColors.slice(0, parsedData.labels.length),
-          borderWidth: 1,
-        },
-      ],
-    });
-    setTotal2(parsedData.totalConsumption)
+        labels: parsedData.labels.map((rowData) => rowData),
+        datasets: [
+          {
+            data: parsedData.calculations,
+            backgroundColor: itemColors.slice(0, parsedData.labels.length),
+            borderWidth: 1,
+          },
+        ],
+      });
+      setTotal2(parsedData.totalConsumption)
+    }
   }, []);
 
 
   useEffect(() => {
     const savedData = localStorage.getItem('MaterialUseData');
+   if (savedData) {
     const parsedData = JSON.parse(savedData);
     if (!Array.isArray(parsedData.calculations)) return;
 
@@ -90,10 +95,12 @@ export default function Scope03Board() {
       ],
     });
     setTotal3(parsedData.totalConsumption)
+   }
 
   }, []);
   useEffect(() => {
     const savedData = localStorage.getItem('WasteDisposalData');
+   if (savedData) {
     const parsedData = JSON.parse(savedData);
     if (!Array.isArray(parsedData.calculations)) return;
 
@@ -109,12 +116,14 @@ export default function Scope03Board() {
       ],
     });
     setTotal4(parsedData.totalConsumption)
+   }
 
   }, []);
 
 
   useEffect(() => {
     const savedData = localStorage.getItem('EmployeeCommutingData');
+   if (savedData) {
     const parsedData = JSON.parse(savedData);
     if (!Array.isArray(parsedData.calculations)) return;
 
@@ -130,10 +139,12 @@ export default function Scope03Board() {
       ],
     });
     setTotal5(parsedData.totalConsumption)
+   }
 
   }, []);
   useEffect(() => {
     const savedData = localStorage.getItem('foodData');
+   if (savedData) {
     const parsedData = JSON.parse(savedData);
     if (!Array.isArray(parsedData.calculations)) return;
 
@@ -149,18 +160,19 @@ export default function Scope03Board() {
       ],
     });
     setTotal6(parsedData.totalConsumption)
+   }
 
   }, []);
 
   return (
     <div className='m-4 d-flex justify-content-center align-items-center  bg-light'>
       <Container fluid >
-      <h1>Scope 03 Dashboard Summary :</h1>
+        <h1>Scope 03 Dashboard Summary :</h1>
         <div className="row">
           <div className='d-flex col-md-6 justify-content-center align-items-center bg-light customPie' md={6}>
             <Container fluid>
               <div className="row">
-                  {chartData1 && <Pie data={chartData1} />}
+                {chartData1 && <Pie data={chartData1} />}
               </div>
               <div className="row mt-3">
                 <Col className='d-flex justify-content-center align-items-center bg-light' md={6}>
@@ -172,9 +184,9 @@ export default function Scope03Board() {
           <div className='d-flex col-md-6 justify-content-center align-items-center bg-light customPie' md={6}>
             <Container fluid>
               <div className="row">
-                
-                  {chartData2 && <Pie data={chartData2} />}
-                
+
+                {chartData2 && <Pie data={chartData2} />}
+
               </div>
               <div className="row mt-3">
                 <Col className='d-flex justify-content-center align-items-center bg-light' md={6}>
@@ -186,9 +198,9 @@ export default function Scope03Board() {
           <div className='d-flex col-md-6 justify-content-center align-items-center bg-light customPie' md={6}>
             <Container fluid>
               <div className="row">
-              
-                  {chartData3 && <Pie data={chartData3} />}
-                
+
+                {chartData3 && <Pie data={chartData3} />}
+
               </div>
               <div className="row mt-3">
                 <Col className='d-flex justify-content-center align-items-center bg-light' md={6}>
@@ -200,9 +212,9 @@ export default function Scope03Board() {
           <div className='d-flex col-md-6 justify-content-center align-items-center bg-light customPie' md={6}>
             <Container fluid>
               <div className="row">
-              
-                  {chartData4 && <Pie data={chartData4} />}
-                
+
+                {chartData4 && <Pie data={chartData4} />}
+
               </div>
               <div className="row mt-3">
                 <Col className='d-flex justify-content-center align-items-center bg-light' md={6}>
@@ -214,9 +226,9 @@ export default function Scope03Board() {
           <div className='d-flex col-md-6 justify-content-center align-items-center bg-light customPie' md={6}>
             <Container fluid>
               <div className="row">
-              
-                  {chartData5 && <Pie data={chartData5} />}
-                
+
+                {chartData5 && <Pie data={chartData5} />}
+
               </div>
               <div className="row mt-3">
                 <Col className='d-flex justify-content-center align-items-center bg-light' md={6}>
@@ -228,9 +240,9 @@ export default function Scope03Board() {
           <div className='d-flex col-md-6 justify-content-center align-items-center bg-light customPie' md={6}>
             <Container fluid>
               <div className="row">
-              
-                  {chartData6 && <Pie data={chartData6} />}
-                
+
+                {chartData6 && <Pie data={chartData6} />}
+
               </div>
               <div className="row mt-3">
                 <Col className='d-flex justify-content-center align-items-center bg-light' md={6}>
@@ -241,12 +253,12 @@ export default function Scope03Board() {
           </div>
         </div>
         <div className='d-flex row justify-content-center align-items-center bg-light customPie' md={6}>
-            <Container fluid>
+          <Container fluid>
             <h1>
-              Scope 03 Tatal Co2 Emissions = {Total1+Total2+Total3+Total4+Total5+Total6}
+              Scope 03 Tatal Co2 Emissions = {Total1 + Total2 + Total3 + Total4 + Total5 + Total6}
             </h1>
-            </Container>
-          </div>
+          </Container>
+        </div>
 
       </Container>
     </div>

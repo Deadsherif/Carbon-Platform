@@ -17,7 +17,7 @@ export default function ScopesDefinition() {
       <p>- Responsibility Organizations have varying degrees of control and responsibility over each scope. Scope 1 emissions are considered the most direct and controllable. while Scope 3 emissions are often more challenging to manage due to the broader supply Chain impact. - Comprehensiveness: A comprehensive understanding of all three scopes allows organizations to assess their total carbon footprint and identify opportunities for emissions reduction throughout their value chain. - Reporting: Many sustainability and environmental reports include data on all three scopes to provide a holistic view of an organization's impact on climate change.  </p>
     </div>
         <div className="col-md-8">
-          <img src="../Imgs/Scope123Emissions_Infographic.jpg" alt="Description of the image" className="img-fluid w-100" />
+          <img src={process.env.PUBLIC_URL + "/Imgs/Scope123Emissions_Infographic.jpg"} alt="Description of the image" className="img-fluid w-100" />
         </div>
       </div>
     </div>

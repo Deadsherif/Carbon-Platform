@@ -29,6 +29,7 @@ export default function Scope02Board() {
 
   useEffect(() => {
     const savedData = localStorage.getItem('ElectricityHeatCooling');
+  if (savedData) {
     const parsedData = JSON.parse(savedData);
     if (!Array.isArray(parsedData.calculations)) return;
 
@@ -44,6 +45,7 @@ export default function Scope02Board() {
       ],
     });
     setTotal1(parsedData.totalConsumption)
+  }
   }, []);
 
   // useEffect(() => {

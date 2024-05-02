@@ -120,7 +120,7 @@ function ProjectsInformation() {
                   a Material Factory,a Restaurant, or other distinct environmental projects. Your response will assist us in better understanding the primary focus or purpose of your sustainability initiative.
                 </p>
               </div>
-              <img className='w-100' src="../Imgs/1.jpg" alt="imgOne" />
+              <img className='w-100' src={process.env.PUBLIC_URL + '/Imgs/1.jpg'} alt="imgOne" />
               <div><h3 className='subTitle'>Quarter:</h3>
                 <p>When selecting the quarter for calculating CO2 emissions.
                   of your activities, consider it as a vital step towards precision. By specifying
@@ -129,12 +129,12 @@ function ProjectsInformation() {
               </div>
             </div>
             <div className="col-md-4 ">
-              <img className='w-100' src="../Imgs/2.jpg" alt="imgTwo" />
+              <img className='w-100' src={process.env.PUBLIC_URL + "/Imgs/2.jpg"} alt="imgTwo" />
               <div><h3 className='subTitle'>Project Stage:</h3>
                 <p>When discussing the 'project stage,' we are seeking insight into the present developmental phase of your initiative. Kindly specify whether your project is in the design, construction, or another distinct stage. This detail allows us to offer tailored assistance and guidance that aligns with the specific requirements of your sustainability project.
                 </p>
               </div>
-              <img className='w-100' src="../Imgs/3.jpg" alt="imgThree" />
+              <img className='w-100' src={process.env.PUBLIC_URL + "/Imgs/3.jpg"} alt="imgThree" />
             </div>
             <div className="col-md-12 mt-3">
               {isLoading ? (

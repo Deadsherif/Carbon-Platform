@@ -24,13 +24,13 @@ export default function About() {
           </div>
         </div>
         <div className="col-md-6">
-          <img  src="../Imgs/about.jpg" alt="Description of the image" className="about-image" />
+          <img  src={process.env.PUBLIC_URL +"/Imgs/about.jpg"} alt="Description of the image" className="about-image" />
         </div>
       </div>
 
       <div className="row pt-5">
         <div className="col-md-6 order-md-2">
-          <img src="../Imgs/OurMission.jpg" alt="Description of the image" className="mission-image img-fluid animate__animated animate__fadeInRight" />
+          <img src={process.env.PUBLIC_URL +"/Imgs/OurMission.jpg"} alt="Description of the image" className="mission-image img-fluid animate__animated animate__fadeInRight" />
         </div>
         <div className="col-md-6">
           <div className="about-content">
@@ -52,13 +52,13 @@ export default function About() {
           </div>
         </div>
         <div className="col-md-6">
-          <img src="../Imgs/OurVision.jpg" alt="Description of the image" className="vision-image img-fluid animate__animated animate__fadeInLeft" />
+          <img src={process.env.PUBLIC_URL +"/Imgs/OurVision.jpg"} alt="Description of the image" className="vision-image img-fluid animate__animated animate__fadeInLeft" />
         </div>
       </div>
 
       <div className="row pt-5 pb-5">
         <div className="col-md-6 order-md-2">
-          <img src="../Imgs/OurValues.jpg" alt="Description of the image" className="values-image img-fluid animate__animated animate__fadeInRight" />
+          <img src={process.env.PUBLIC_URL +"/Imgs/OurValues.jpg"} alt="Description of the image" className="values-image img-fluid animate__animated animate__fadeInRight" />
         </div>
         <div className="col-md-6">
           <div className="about-content">
